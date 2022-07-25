@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  scope 'greeting/' do
-    get '', to: 'greeting#hello'
-    get 'hello', to: 'greeting#hello'
-    get 'good-morning', to: 'greeting#good_morning'
+  get 'person/index'
+  scope 'greeting' do
+    get '/', to: 'greeting#index'
+    get '/hello', to: 'greeting#hello'
+    get '/new', to: 'greeting#new'
+    post '/new', to: 'greeting#create'
+    get '/:greeting', to: 'greeting#greeting'
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

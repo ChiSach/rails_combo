@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 my-auto mx-auto">
+        <%= form_with(model: @say_greeting, url: new_path) do |form| %>
+        <strong><label for="url-input" class="form-label text-success">Title</label></strong>
+        <div class="col">
+            <%= form.text_field :title, class: 'form-control mb-1', placeholder: 'good-morning' %>
+        </div>
+        <strong><label for="greeting_text-input" class="form-label text-success">Greeting text</label></strong>
+        <div class="col">
+            <%= form.text_area :greeting_text, size: "60x10", class: 'form-control mb-1', placeholder: 'Good Morning!' %>
+        </div>
+        <%= form.submit "Save", class: 'btn btn-success' %>
+        <% end %>
+    </div>
+</div>
