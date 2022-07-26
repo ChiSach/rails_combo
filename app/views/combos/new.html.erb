@@ -1,0 +1,15 @@
+<%= form_with url: combos_path, model: @combo do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <br/>
+  Combo Meta:
+  <ul>
+    <%= form.fields_for :combo_meta do |combo_meta_form| %>
+      <li>
+        <%= combo_meta_form.label :name_meta %>
+        <%= combo_meta_form.text_field :name_meta %>
+      </li>
+    <% end %>
+  </ul>
+  <%= form.submit "Save" %>
+<% end %>

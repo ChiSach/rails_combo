@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'person/index'
+  resource :combos
   scope 'greeting' do
     get '/', to: 'greeting#index'
     get '/hello', to: 'greeting#hello'
